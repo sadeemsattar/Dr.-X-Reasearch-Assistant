@@ -93,7 +93,7 @@ Dr. X Research Assistant is an AI-powered tool designed to assist with document 
 
 3. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install --use-deprecated=legacy-resolver -r requirements.txt
    ```
 
 4. Install additional system dependencies for `PyMuPDF` and `docx2txt` if required.
