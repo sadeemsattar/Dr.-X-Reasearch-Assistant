@@ -20,7 +20,18 @@ Dr. X Research Assistant is an AI-powered tool designed to assist with document 
 2. Start the Ollama server:
    ```bash
    ollama serve
+   ollama run llama3.2:3b
+   ollama pull nomic-embed-text
    ```
+3. Run llama3.2 model
+    ```bash
+    ollama run llama3.2:3b
+    ```
+4. Run Embedding model
+    ```bash
+    ollama pull nomic-embed-text
+    ```
+
 
 ## Installation
 
@@ -59,19 +70,11 @@ Dr. X Research Assistant is an AI-powered tool designed to assist with document 
    - Translate documents into a target language
    - Ask questions about the document content
 
-## .gitignore
-
-The following files and directories are ignored by Git:
-
-```
-data/
-temp/
-.venv/
-```
 
 ## Notes
 
 - The `data/` and `temp/` directories are ignored by Git as specified in the `.gitignore` file.
 - Ensure that the Ollama server is running before starting the application.
 - The application uses `Qdrant` for vector storage and retrieval.
+
 
