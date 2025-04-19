@@ -58,6 +58,7 @@ def process_prompt():
             if intent == "summarize":
                 print("Summarize Tool")
                 output, _ = summarize(st.session_state.text)
+                score = evaluate_summary(output, st.session_state.text)
             elif intent == "translate":
                 print("Translate Tool")
                 target_lang = extract_language(prompt)
@@ -65,7 +66,7 @@ def process_prompt():
             elif intent == "qa":
                 print("Question Answering Tool")
                 output, _ = answer_question(st.session_state.vectorstore, prompt, st.session_state.chat_dialog_history)
-                score = evaluate_summary(output, st.session_state.text)
+                
             else:
                 output = "Sorry, I couldn't understand your request."
 
